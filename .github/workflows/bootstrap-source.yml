@@ -9,7 +9,6 @@ permissions:
 
 jobs:
   import-source:
-    if: ${{ github.actor != 'github-actions[bot]' && hashFiles('.bootstrap/source.part*.b64') != '' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
