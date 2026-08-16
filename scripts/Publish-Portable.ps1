@@ -91,6 +91,7 @@ Copy-Item (Join-Path $repositoryRoot "docs\troubleshooting.md") $publishedDocsDi
 & $distributionAuditScript -Path $stagingDirectory
 
 Remove-ArtifactDirectory $publishDirectory
+New-Item -ItemType Directory -Force -Path (Split-Path -Parent $publishDirectory) | Out-Null
 Move-Item -LiteralPath $stagingDirectory -Destination $publishDirectory
 
 Remove-Item -LiteralPath $temporaryArchivePath, $temporaryChecksumPath -Force -ErrorAction SilentlyContinue
