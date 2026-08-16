@@ -6,6 +6,9 @@ on:
     paths:
       - VERSION
       - .github/workflows/release.yml
+      - scripts/Publish-Portable.ps1
+      - scripts/Build-Installer.ps1
+      - installer/**
   workflow_dispatch:
     inputs:
       version:
