@@ -18,7 +18,7 @@
     <RootNamespace>CodexLimitMonitor.App</RootNamespace>
     <Product>Codex Limit Monitor</Product>
     <Description>Native Windows HUD for Codex rate limits</Description>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
   </PropertyGroup>
 
 </Project>
