@@ -1,0 +1,10 @@
+global using System.IO;
+global using Application = System.Windows.Application;
+global using Brush = System.Windows.Media.Brush;
+global using Brushes = System.Windows.Media.Brushes;
+global using ButtonBase = System.Windows.Controls.Primitives.ButtonBase;
+global using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+global using MessageBox = System.Windows.MessageBox;
+global using Pen = System.Windows.Media.Pen;
+global using Point = System.Windows.Point;
+global using Size = System.Windows.Size;

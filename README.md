@@ -112,5 +112,3 @@ Portable-публикация создаётся в `artifacts\publish\win-x64`,
 - виджет не прогнозирует расход токенов и не управляет reset credits.
 
 Дополнительные сведения: [устранение неполадок](docs/troubleshooting.md) и [заметки о протоколе](docs/protocol-notes.md).
-
-<!-- bootstrap trigger -->
