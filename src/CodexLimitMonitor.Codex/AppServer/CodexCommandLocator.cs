@@ -119,6 +119,7 @@ public static class CodexCommandLocator
         {
             yield return Path.Combine(localAppData, "Microsoft", "WinGet", "Links", "codex.exe");
             yield return Path.Combine(localAppData, "Microsoft", "WindowsApps", "codex.exe");
+            yield return Path.Combine(localAppData, "Programs", "OpenAI", "Codex", "bin", "codex.exe");
             yield return Path.Combine(localAppData, "Programs", "Codex", "codex.exe");
         }
 
