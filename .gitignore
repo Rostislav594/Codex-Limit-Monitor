@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+*.suo
+.codex-stage0-schema/
+artifacts/
+.ui-review/
+.codex-docx-review/

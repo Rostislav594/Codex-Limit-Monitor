@@ -1,0 +1,39 @@
+name: Import project source
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    if: ${{ github.actor != 'github-actions[bot]' && hashFiles('.bootstrap/source.part*.b64') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and extract cleaned source
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .bootstrap/source.part*.b64 | base64 --decode > /tmp/codex-source.tar.xz
+          tar -xJf /tmp/codex-source.tar.xz -C .
+          rm -rf .bootstrap
+          rm -f .github/workflows/bootstrap-source.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+
+      - name: Commit imported source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Import Codex Limit Monitor source"
+          git push origin HEAD:main

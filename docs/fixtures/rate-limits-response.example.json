@@ -1,0 +1,38 @@
+{
+  "id": 3,
+  "result": {
+    "rateLimits": {
+      "limitId": "example-limit",
+      "limitName": "Example Codex Limit",
+      "planType": "unknown",
+      "primary": {
+        "usedPercent": 25,
+        "windowDurationMins": 300,
+        "resetsAt": 1893456000
+      },
+      "secondary": null,
+      "rateLimitReachedType": null,
+      "credits": null,
+      "individualLimit": null,
+      "spendControlReached": null
+    },
+    "rateLimitsByLimitId": {
+      "example-limit": {
+        "limitId": "example-limit",
+        "limitName": "Example Codex Limit",
+        "planType": "unknown",
+        "primary": {
+          "usedPercent": 25,
+          "windowDurationMins": 300,
+          "resetsAt": 1893456000
+        },
+        "secondary": null,
+        "rateLimitReachedType": null,
+        "credits": null,
+        "individualLimit": null,
+        "spendControlReached": null
+      }
+    },
+    "rateLimitResetCredits": null
+  }
+}
